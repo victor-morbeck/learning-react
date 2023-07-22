@@ -54,7 +54,6 @@ import { useState } from "react"
         {id:2, name:"Bruno", age:33},
         {id:3, name:"Psy", age:30}
     ]);
-    var counter = 0;
     const excludeHandler = () => {
         const randomNumber = Math.floor(Math.random() * user.length) + 1;
         setUser((prevUser) => prevUser.filter((user) => randomNumber !== user.id));
