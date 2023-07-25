@@ -6,8 +6,17 @@ import ManageData from './components/ManageData'
 import ListRender from './components/ListRender'
 import { ConditionalRender } from './components/ConditionalRender'
 import ShowUsername from './components/ShowUsername'
-
+import CarDetails from './components/CarDetails'
 function App() {
+
+  //Criando as cosntants
+
+  const cars = [
+    {id:1, brand:"Ferrari", color:"Aramarela", newCar: true, km:0},
+    {id:2, brand:"Subaru", color:"Azul", newCar: true, km:0},
+    {id:3, brand:"Mazda", color:"Vermelho", newCar: true, km:0}
+
+  ]
   
   return (
     <>
@@ -17,6 +26,11 @@ function App() {
     <ListRender/>
     <ConditionalRender/>
     <ShowUsername name="Victor"/>
+    <CarDetails brand="VW" km={1000000} color="Azul"/>
+    {/* loop em array de objetos */}
+    {cars.map((car) =>(
+      <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}/>
+    ))}
     </>
   )
 }
