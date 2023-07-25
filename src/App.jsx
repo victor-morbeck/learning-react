@@ -5,6 +5,7 @@ import './App.css'
 import ManageData from './components/ManageData'
 import ListRender from './components/ListRender'
 import { ConditionalRender } from './components/ConditionalRender'
+import ShowUsername from './components/ShowUsername'
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
     <ManageData/>
     <ListRender/>
     <ConditionalRender/>
+    <ShowUsername name="Victor"/>
     </>
   )
 }

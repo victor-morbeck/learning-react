@@ -2,7 +2,7 @@
 import {useState} from 'react';
 const ManageData = () => {
 
-const someData = 12;
+var someData = 12;
 const [number, setNumber] = useState(someData)
 
   return (
